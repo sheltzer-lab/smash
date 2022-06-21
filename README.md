@@ -36,7 +36,7 @@ The general process for a single SMASH run starting from this repository is as f
 
 ## Benchmarking
 
-SMASH has diminishing returns on thread usage as most time is spent in IO across the memory-mapped reference. (It is possible to forego memory mapping via `smash`, however the pre-built BASH scripts do not take this option.)
+SMASH has diminishing returns on thread usage as most time is spent in IO across the memory-mapped reference.
 
 On a benchmarked example, the following results were recieved via `hyperfine` where only the `[num_threads]` parameter was changed.
 
