@@ -61,7 +61,7 @@ The baseline command used was:
   A20581 \
   /home/ryan/smash/testing/data/Sample_A20581qC20PXT1M1/A20581qC20PXT1M1_S7_L001_R1_001.fastq.gz \
   /home/ryan/smash/testing/data/Sample_A20581qC20PXT1M1/A20581qC20PXT1M1_S7_L001_R2_001.fastq.gz \
-  {num_threads}'
+  {num_threads}
 ```
 
 From the above, we can see that despite 16 threads being 2.02 times faster than 2 threads this means ~4 times the total resource usage per unit of work. For example, if we assume a 2 thread run takes 4 hours to complete we would expend 2CPU x 4h or 8 CPU-hours; the same run on 16 threads would complete in roughly half the time or 2 hours however we would expend 16CPU x 2h or 32 CPU-hours. The optimal threading is 4 threads.
