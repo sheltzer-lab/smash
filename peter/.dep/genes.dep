@@ -1,8 +1,0 @@
-genes.o: core/genes.cpp core/genes.h core/mumdex.h utility/error.h \
- utility/files.h utility/error.h utility/paastrings.h
-core/genes.h:
-core/mumdex.h:
-utility/error.h:
-utility/files.h:
-utility/error.h:
-utility/paastrings.h:

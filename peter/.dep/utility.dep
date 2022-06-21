@@ -1,3 +1,0 @@
-utility.o: utility/utility.cpp utility/utility.h utility/error.h
-utility/utility.h:
-utility/error.h:
