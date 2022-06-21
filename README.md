@@ -68,7 +68,16 @@ From the above, we can see that despite 16 threads being 2.02 times faster than 
 
 ![Image showing that 4 threads minimizes the CPU-hours expended](./smash-benchmark.svg)
 
+## Assorted Notes on Usage
+
++ `smash.sh` and `smash_marvel.sh` wrap the R1 and R2 files in a call to `zcat` before passing them to `smash` so both files must be GZipped
++ If running SMASH on a cluster, be sure to compile against the oldest nodes to ensure functional ASM on any node, at YSM this is done via `srun -C oldest`
++ It is highly encouraged to use mummer's `-rcref` if possible as it will greatly speed up later steps -- if desired, both mummer with and without `-rcref` can be run
+
+## Plans
+
+There are current plans to create a Nextflow script which will take any number of SMASH runs and automatically run them locally or via a cluster from a single workflow definition. This script will use the 4 thread optimum and 32GB "low memory" reference -- working under the assumption that efficient resource usage is more important than walltime.
+
 ## Alternatives
 
 NYGC has prepared a [Docker image](gcr.io/nygc-public/smash:25e1f2f) of SMASH prior to any edits made by Ryan A. Hagenson for application in the Sheltzer Lab. This is the same baseline Ryan A. Hagenson began his edits from and should match the original content under `peter/`.
-
