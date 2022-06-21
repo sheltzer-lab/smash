@@ -21,18 +21,18 @@ All content under `peter/` belongs to Peter Andrews. Source code under `peter/` 
 The general process for a single SMASH run starting from this repository is as follows:
 
 1. Unpack `peter/bins-n-ref.tar.gz` to a central location
-  + This contains two subdirectories, `bins/` and `ref/`, both of which will be used later
+   + This contains two subdirectories, `bins/` and `ref/`, both of which will be used later
 2. Change directory into `peter/` and build `smash`, `extract_cn_segments`, and `mummer`
 3. Build the genome reference index via `mummer`
-  + Run `mummer [-rcref] [-verbose] /absolute/path/to/reference.fa`
-  + `-rcref` is "high memory" index, ~120GB for the reference unpacked above
-  + Not using `-rcref` is "low memory" index, ~32GB for the reference unpacked above
-  + This process will build a subdirectory `/absolute/path/to/reference.fa.bin/` containing the associated index files
+   + Run `mummer [-rcref] [-verbose] /absolute/path/to/reference.fa`
+   + `-rcref` is "high memory" index, ~120GB for the reference unpacked above
+   + Not using `-rcref` is "low memory" index, ~32GB for the reference unpacked above
+   + This process will build a subdirectory `/absolute/path/to/reference.fa.bin/` containing the associated index files
 4. The easiest way to run SMASH is to use one of the pre-built BASH scripts
-  + `peter/cn/smash.sh` is the "standard" run
-    - Usage: `smash.sh /path/to/peter/ /path/to/reference.fa /path/to/bins/ bins,to,use ID001 /path/to/ID001/R1.fq.gz /path/to/ID001/R2.fq.gz [num_threads]`
-  + `peter/cn/smash_marvel.sh` adds additional steps
-    - Usage: `smash_marvel.sh /path/to/peter/ /path/to/reference.fa /path/to/bins/ bins,to,use ID001 /path/to/ID001/R1.fq.gz /path/to/ID001/R2.fq.gz [num_threads]`
+   + `peter/cn/smash.sh` is the "standard" run
+     - Usage: `smash.sh /path/to/peter/ /path/to/reference.fa /path/to/bins/ bins,to,use ID001 /path/to/ID001/R1.fq.gz /path/to/ID001/R2.fq.gz [num_threads]`
+   + `peter/cn/smash_marvel.sh` adds additional steps
+     - Usage: `smash_marvel.sh /path/to/peter/ /path/to/reference.fa /path/to/bins/ bins,to,use ID001 /path/to/ID001/R1.fq.gz /path/to/ID001/R2.fq.gz [num_threads]`
 
 ## Benchmarking
 
