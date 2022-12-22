@@ -1,4 +1,4 @@
-# Sheltzer SMASH
+# SMASH
 
 This is a collection of the elements needed from Peter Andrews' [SMASH](https://doi.org/10.1101/gr.201491.115), which requires elements from Peter Andrews' [MUMdex](https://github.com/rhagenson/mumdex) code.
 
